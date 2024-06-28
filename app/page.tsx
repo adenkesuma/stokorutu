@@ -69,67 +69,15 @@ export default function Home() {
   }
 
   return (
-    <main className="mx-auto w-full max-w-[1440px] px-40 pt-20">
+    <main className="mx-auto w-full max-w-[1440px] px-40 pt-14">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <div className="mt-5 flex flex-col sm:flex-row">
-            <div className="sm:w-1/2 flex flex-col gap-y-4">
-              <FormField
-                control={form.control}
-                name="prompt"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Prompt{" "}
-                      <span className="text-gray-400 font-normal">
-                        (Type what you want to create)
-                      </span>
-                    </FormLabel>
-                    <FormControl>
-                      <Textarea
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
-                        placeholder="Cute cat eating fish."
-                        rows={3}
-                        required={true}
-                        {...field}
-                      ></Textarea>
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="negativePrompt"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Negative Prompt{" "}
-                      <span className="text-gray-400 font-normal">
-                        (Type what you don&apos;t want to create)
-                      </span>
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
-                        {...field}
-                      />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-              <Button
-                type="submit"
-                className="w-full justify-center mt-2"
-                disabled={form.formState.isSubmitting}
-              >
-                Run
-              </Button>
-            </div>
-            <div className="sm:w-1/2 flex flex-col gap-y-4">
+          <div className="mt-5 mx-auto flex justify-center flex-row gap-12 items-center">
+            <div className="sm:w-1/2 flex flex-col gap-y-4 mb-12">
               <div className="sm:px-5 py-3 sm:py-0">
                 <div className="relative transition-opacity duration-300">
                   {!imageUrl ? (
-                    <div className="mt-2 flex justify-center items-center rounded-lg border border-dashed border-gray-900/25 min-h-[240px]">
+                    <div className="mt-2 flex justify-center items-center rounded-lg border border-dashed border-gray-900/25 h-[500px]">
                       {isLoading && <Loader />}
                       {isLoading && (
                         <div className="opacity-50 h-[20px] text-[#1f2937]">
@@ -160,7 +108,7 @@ export default function Home() {
                       )}
                     </div>
                   ) : (
-                    <div className="mt-2 flex justify-center items-center rounded-lg border border-dashed border-gray-900/25 min-h-[240px]">
+                    <div className="mt-2 flex justify-center items-center rounded-lg border border-dashed border-gray-900/25 h-[500px]">
                       <div className="absolute top-3 right-4 group inline-flex space-x-2 z-20">
                         <a
                           href={imageUrl}
@@ -199,6 +147,59 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="sm:w-1/2 flex flex-col gap-y-4">
+              <FormField
+                control={form.control}
+                name="prompt"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      Prompt{" "}
+                      <span className="text-gray-400 font-normal">
+                        (Type what you want to create)
+                      </span>
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
+                        placeholder="Cute cat eating fish."
+                        rows={5}
+                        required={true}
+                        {...field}
+                      ></Textarea>
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="negativePrompt"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>
+                      Negative Prompt{" "}
+                      <span className="text-gray-400 font-normal">
+                        (Type what you don&apos;t want to create)
+                      </span>
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 px-3"
+                        {...field}
+                      />
+                    </FormControl>
+                  </FormItem>
+                )}
+              />
+              <Button
+                type="submit"
+                className="w-full justify-center mt-2 font-medium text-base text-white py-2"
+                disabled={form.formState.isSubmitting}
+              >
+                Run
+              </Button>
+            </div>
+            
           </div>
         </form>
       </Form>
