@@ -23,3 +23,11 @@ yarn && yarn dev
 # or
 pnpm i && pnpm dev
 ```# stokorutu
+
+## Demo
+![image](https://github.com/adenkesuma/stokorutu/assets/101191379/e40070d1-7474-4602-8527-728d13887c71)
+![image](https://github.com/adenkesuma/stokorutu/assets/101191379/fe8e7960-60d3-49fc-b5a7-314511a2e2b1)
+![Uploading image.png…]()
+
+
+
