@@ -14,6 +14,12 @@ Stokorutu is an AI sticker art generation.
 - [NextJS](https://nextjs.org/)
 - [Fal API](https://fal.ai/)
 
+## Demo
+![image](https://github.com/adenkesuma/stokorutu/assets/101191379/e40070d1-7474-4602-8527-728d13887c71)
+![image](https://github.com/adenkesuma/stokorutu/assets/101191379/fe8e7960-60d3-49fc-b5a7-314511a2e2b1)
+![image](https://github.com/adenkesuma/stokorutu/assets/101191379/fa667973-9ef7-489b-af5e-06cf7583c5c8)
+
+
 ## Local start
 
 ```bash
@@ -23,3 +29,7 @@ yarn && yarn dev
 # or
 pnpm i && pnpm dev
 ```# stokorutu
+
+
+
+
