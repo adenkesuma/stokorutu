@@ -1,0 +1,28 @@
+Kelompok AMSYONG AA INI AI
+Anggota :
+Aden Kesuma – 221111805
+Darmin Susanto – 221111398
+Hanssen Halim – 221112074
+Michael Khosasi – 221111338
+
+STOKORUTU AI
+an AI Sticker Art Generator
+Pendahuluan
+Project kami ini tentang implementasi AI pada website supaya kita bisa prompt (sesuatu yang ingin degenerate) menghasilkan sebuah art sticker
+Kami menggunakan NextJS untuk project kami 
+Progress 
+Project kami sudah berhasil mengenerate atau menghasilkan sebuah art sticker dari Prompts yang kita input dan hasil art sticker yang keluar juga bisa didownload
+Pembagian Tugas :
+Aden Kesuma : Membuat kode AI Art Sticker Generator
+Darmin Susanto : Membuat Laporan Kelompok
+Hanssen Halim : Membuat Laporan Kelompok dan Testing program saat recording
+Michael Khosasi : Merekam dan Mengedit Video
+
+Package yang dibutuhkan :
+•NextJS
+•Fal API
+Ada 2 jenis textfield yang bisa di prompt untuk menghasilkan art sticker yang kita inginkan :
+1.Prompt 
+Prompt utama untuk objek art sticker yang kita generate
+2.Negative prompt
+Prompt tambahan yang optional untuk mengurangi atau mengabaikan ciri-ciri dari art sticker yang ingin kita generate
